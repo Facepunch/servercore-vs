@@ -14,7 +14,7 @@ RUN pipx ensurepath
 RUN choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 #RUN choco install visualStudio2017buildtools --package-parameters "--add Microsoft.VisualStudio.Component.Windows81SDK --includeRecommended" -y 
 RUN choco install visualstudio2019buildtools --package-parameters "--includeRecommended" -y
-RUN choco install visualstudio2019-workload-vctools --package-parameters "--includeRecommended --add Microsoft.VisualStudio.Component.VC.140" -y
+RUN choco install visualstudio2019-workload-vctools --package-parameters "--includeRecommended --includeOptional" -y
 #RUN Invoke-WebRequest https://aka.ms/vs/16/release/vs_buildtools.exe -OutFile C:\\vs_buildtools.exe
 #COPY vsconfig.json C:\\vsconfig.json
 #RUN C:\\vs_buildtools.exe --quiet --wait --norestart --nocache --includeRecommended --config C:\\vsconfig.json
