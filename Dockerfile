@@ -27,8 +27,10 @@ RUN python -m pip install pipx
 RUN pipx ensurepath
 RUN choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 RUN choco install strawberryperl -y
-RUN choco install git
-RUN choco install dotnet --version 6.0.30
+RUN choco install git -y
+RUN choco install dotnet --version 6.0.30 -y
+RUN choco install dotnet-5.0-sdk -y
+
 RUN cpan install Win32:Registry
 
 ## VISUAL STUDIO SECTION
